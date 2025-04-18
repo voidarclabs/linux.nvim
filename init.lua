@@ -18,3 +18,5 @@ vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
 vim.keymap.set("n", "<C-w>d", "<cmd>lua Snacks.dashboard()<CR>")
 vim.keymap.set("n", "<C-p>", "<cmd>JABSOpen<CR>")
+
+vim.keymap.set("n", "<M-w>", "<C-w>")
