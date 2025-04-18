@@ -17,6 +17,7 @@
   "nvim-lint": { "branch": "master", "commit": "3615c26c4922ae5f7366f0c1943a0e7cece04325" },
   "nvim-lspconfig": { "branch": "master", "commit": "1a3a429efec62af632dfd8fa9b52fa226f655ec2" },
   "nvim-web-devicons": { "branch": "master", "commit": "c90dee4e930ab9f49fa6d77f289bff335b49e972" },
+  "simplyfile.nvim": { "branch": "main", "commit": "c4dfc0f3431898c3abbef267b226f6cdd2a67b38" },
   "snacks.nvim": { "branch": "main", "commit": "bc0630e43be5699bb94dadc302c0d21615421d93" },
   "tint.nvim": { "branch": "master", "commit": "586e87f00c8b0f5e857cefe10839e41f3e8c6d01" },
   "vim-floaterm": { "branch": "master", "commit": "4e28c8dd0271e10a5f55142fb6fe9b1599ee6160" }
