@@ -20,3 +20,4 @@ vim.keymap.set("n", "<C-w>d", "<cmd>lua Snacks.dashboard()<CR>")
 vim.keymap.set("n", "<C-p>", "<cmd>JABSOpen<CR>")
 
 vim.keymap.set("n", "<M-w>", "<C-w>")
+vim.keymap.set("n", "<C-k>", "<cmd>FloatermNew lazygit<CR>")
