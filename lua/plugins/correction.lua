@@ -9,7 +9,7 @@ return {
 		config = function()
 			require("mason").setup()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "pyright", "rust_analyzer" }, -- Add your desired LSPs
+				ensure_installed = { "lua_ls", "pyright", "rust_analyzer", "eslint" }, -- Add your desired LSPs
 				automatic_installation = true,
 			})
 
@@ -17,6 +17,26 @@ return {
 			lspconfig.lua_ls.setup({})
 			lspconfig.pyright.setup({})
 			lspconfig.rust_analyzer.setup({})
+			lspconfig.eslint.setup({
+				capabilities = require("cmp_nvim_lsp").default_capabilities(),
+				on_attach = function(client, bufnr)
+					-- Enable ESLint diagnostics on file save
+					client.resolved_capabilities.document_formatting = true
+					-- If you're using eslint with filetype handling
+					vim.cmd([[autocmd BufWritePre <buffer> EslintFixAll]])
+				end,
+			})
+			lspconfig.emmet_ls.setup({
+				capabilities = require("cmp_nvim_lsp").default_capabilities(),
+				filetypes = { "html", "css", "javascriptreact", "typescriptreact" }, -- Add more if needed
+				init_options = {
+					html = {
+						options = {
+							["bem.enabled"] = true,
+						},
+					},
+				},
+			})
 		end,
 	},
 
@@ -63,7 +83,7 @@ return {
 					["<CR>"] = cmp.mapping.confirm({ select = true }), -- Confirm selection with Enter
 				}),
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
+					{ name = "nvim_lsp" }, -- This should provide LSP completions like for ESLint
 					{ name = "luasnip" },
 					{ name = "buffer" },
 					{ name = "path" },
@@ -80,14 +100,10 @@ return {
 
 			-- Explicitly define linters for each file type (without ast_grep)
 			lint.linters_by_ft = {
-				lua = { "luacheck" }, -- Use "luacheck" instead of "ast_grep"
 				python = { "flake8" },
 				javascript = { "eslint" },
 				typescript = { "eslint" },
 			}
-
-			-- Check if ast_grep is accidentally registered and remove it
-			lint.linters.ast_grep = nil
 
 			-- Auto-run the linter only for the configured filetypes
 			vim.api.nvim_create_autocmd("BufWritePost", {

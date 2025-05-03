@@ -22,3 +22,4 @@ vim.keymap.set("n", "<C-p>", "<cmd>JABSOpen<CR>")
 
 vim.keymap.set("n", "<M-w>", "<C-w>")
 vim.keymap.set("n", "<C-k>", "<cmd>FloatermNew lazygit<CR>")
+vim.keymap.set("n", "<C-h>", "<cmd>FloatermKill<CR>")
