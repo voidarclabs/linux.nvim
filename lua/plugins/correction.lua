@@ -16,16 +16,10 @@ return {
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({})
 			lspconfig.pyright.setup({})
-			lspconfig.rust_analyzer.setup({})
-			lspconfig.eslint.setup({
-				capabilities = require("cmp_nvim_lsp").default_capabilities(),
-				on_attach = function(client, bufnr)
-					-- Enable ESLint diagnostics on file save
-					client.resolved_capabilities.document_formatting = true
-					-- If you're using eslint with filetype handling
-					vim.cmd([[autocmd BufWritePre <buffer> EslintFixAll]])
-				end,
+			lspconfig.ts_ls.setup({
+				capabilities = capabilities,
 			})
+			lspconfig.rust_analyzer.setup({})
 			lspconfig.emmet_ls.setup({
 				capabilities = require("cmp_nvim_lsp").default_capabilities(),
 				filetypes = { "html", "css", "javascriptreact", "typescriptreact" }, -- Add more if needed

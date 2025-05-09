@@ -24,3 +24,5 @@ vim.keymap.set("n", "<C-j>", "<cmd>lua MiniFiles.open()<CR>")
 vim.keymap.set("n", "<M-w>", "<C-w>")
 vim.keymap.set("n", "<C-k>", "<cmd>FloatermNew lazygit<CR>")
 vim.keymap.set("n", "<C-h>", "<cmd>FloatermKill<CR>")
+
+vim.lsp.set_log_level("debug")
