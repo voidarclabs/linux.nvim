@@ -15,7 +15,15 @@ return {
 
 			local lspconfig = require("lspconfig")
 			lspconfig.lua_ls.setup({})
+			--Enable (broadcasting) snippet capability for completion
+			local capabilities = vim.lsp.protocol.make_client_capabilities()
+			capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+			vim.lsp.config("cssls", {
+				capabilities = capabilities,
+			})
 			lspconfig.pyright.setup({})
+			lspconfig.cssls.setup({})
 			lspconfig.ts_ls.setup({
 				capabilities = capabilities,
 			})
@@ -78,7 +86,7 @@ return {
 				}),
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" }, -- This should provide LSP completions like for ESLint
-					{ name = "luasnip" },
+					-- { name = "luasnip" },
 					{ name = "buffer" },
 					{ name = "path" },
 				}),
