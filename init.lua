@@ -26,3 +26,5 @@ vim.keymap.set("n", "<C-k>", "<cmd>FloatermNew lazygit<CR>")
 vim.keymap.set("n", "<C-h>", "<cmd>FloatermKill<CR>")
 
 vim.lsp.set_log_level("debug")
+
+require("leap").set_default_mappings()

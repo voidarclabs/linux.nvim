@@ -13,13 +13,5 @@ return {
 			},
 		})
 		require("mini.notify").setup()
-		require("mini.surround").setup({
-			mappings = {
-				add = "gsa", -- Add surrounding
-				delete = "gsd", -- Delete surrounding
-				find = "gsf", -- Find surrounding
-				replace = "gsr", -- Replace surrounding
-			},
-		})
 	end,
 }
