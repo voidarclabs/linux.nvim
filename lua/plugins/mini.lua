@@ -3,7 +3,11 @@ return {
 	version = "*", -- or a specific tag
 	config = function()
 		-- Only load the modules you want
-		require("mini.animate").setup()
+		require("mini.animate").setup({
+			cursor = {
+				enable = false,
+			},
+		})
 		require("mini.pairs").setup()
 		require("mini.files").setup()
 		require("mini.statusline").setup()
