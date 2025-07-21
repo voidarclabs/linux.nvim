@@ -23,13 +23,25 @@ vim.keymap.set("n", "<leader>wd", "<cmd>lua Snacks.dashboard()<CR>")
 vim.keymap.set("n", "<leader>l", "<cmd>bnext<CR>")
 vim.keymap.set("n", "<leader>h", "<cmd>bprev<CR>")
 vim.keymap.set("n", "<leader>j", "<cmd>lua MiniFiles.open()<CR>")
-vim.keymap.set("n", "<leader>u", "<cmd>lua Snacks.picker.undo()<CR>")
+vim.keymap.set("n", "<leader>f", "<cmd>lua Snacks.picker.files()<CR>")
+vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<cr><cmd>UndotreeFocus<cr>")
 
 vim.keymap.set("n", "<leader>k", "<cmd>FloatermNew lazygit<CR>")
 vim.keymap.set("n", "<leader>x", "<cmd>FloatermKill<CR>")
 
 vim.keymap.set("i", "jj", "<Esc>")
 
-vim.lsp.set_log_level("debug")
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
 
 require("leap").set_default_mappings()
