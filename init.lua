@@ -1,3 +1,5 @@
+vim.g.mapleader = "<Space>"
+
 require("config.lazy")
 
 vim.cmd.colorscheme("catppuccin-mocha")
@@ -16,14 +18,17 @@ vim.keymap.set("n", "<right>", '<cmd>echo "Use l to move!!"<CR>')
 vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
-vim.keymap.set("n", "<M-w>", "<C-w>")
-vim.keymap.set("n", "<C-w>d", "<cmd>lua Snacks.dashboard()<CR>")
-vim.keymap.set("n", "<A-w>d", "<cmd>lua Snacks.dashboard()<CR>")
-vim.keymap.set("n", "<C-p>", "<cmd>bnext<CR>")
-vim.keymap.set("n", "<C-j>", "<cmd>lua MiniFiles.open()<CR>")
+vim.keymap.set("n", "<leader>w", "<C-w>")
+vim.keymap.set("n", "<leader>wd", "<cmd>lua Snacks.dashboard()<CR>")
+vim.keymap.set("n", "<leader>l", "<cmd>bnext<CR>")
+vim.keymap.set("n", "<leader>h", "<cmd>bprev<CR>")
+vim.keymap.set("n", "<leader>j", "<cmd>lua MiniFiles.open()<CR>")
+vim.keymap.set("n", "<leader>u", "<cmd>lua Snacks.picker.undo()<CR>")
 
-vim.keymap.set("n", "<C-k>", "<cmd>FloatermNew lazygit<CR>")
-vim.keymap.set("n", "<C-h>", "<cmd>FloatermKill<CR>")
+vim.keymap.set("n", "<leader>k", "<cmd>FloatermNew lazygit<CR>")
+vim.keymap.set("n", "<leader>x", "<cmd>FloatermKill<CR>")
+
+vim.keymap.set("i", "jj", "<Esc>")
 
 vim.lsp.set_log_level("debug")
 

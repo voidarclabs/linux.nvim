@@ -6,6 +6,7 @@ return {
 	opts = {
 		bigfile = { enabled = true },
 
+		picker = {},
 		dashboard = {
 			enabled = true,
 			width = 100,

@@ -10,7 +10,6 @@ return {
 		})
 		require("mini.pairs").setup()
 		require("mini.files").setup()
-		require("mini.statusline").setup()
 		require("mini.cursorword").setup({
 			content = {
 				active = true,
