@@ -4,6 +4,7 @@ return {
 	lazy = false,
 	---@type snacks.Config
 	opts = {
+		lazygit = { enabled = true },
 		bigfile = { enabled = true },
 
 		picker = {},
@@ -12,13 +13,13 @@ return {
 			width = 100,
 			preset = {
 				keys = {
-					{ icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+					{ icon = " ", key = "f", desc = "Find File", action = ":Pick files" },
 					{ icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
 					{
 						icon = " ",
 						key = "g",
 						desc = "Find Text",
-						action = ":lua Snacks.dashboard.pick('live_grep')",
+						action = ":Pick live_grep",
 					},
 					{
 						icon = " ",

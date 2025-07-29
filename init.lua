@@ -2,9 +2,10 @@ vim.g.mapleader = "<Space>"
 
 require("config.lazy")
 
+vim.opt.splitbelow = true
+
 vim.cmd.colorscheme("catppuccin-mocha")
 
-vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 vim.opt.cursorline = true
@@ -23,10 +24,11 @@ vim.keymap.set("n", "<leader>wd", "<cmd>lua Snacks.dashboard()<CR>")
 vim.keymap.set("n", "<leader>l", "<cmd>bnext<CR>")
 vim.keymap.set("n", "<leader>h", "<cmd>bprev<CR>")
 vim.keymap.set("n", "<leader>j", "<cmd>lua MiniFiles.open()<CR>")
-vim.keymap.set("n", "<leader>f", "<cmd>lua Snacks.picker.files()<CR>")
+vim.keymap.set("n", "<leader>f", "<cmd>Pick files<cr>")
+vim.keymap.set("n", "<leader>g", "<cmd>Pick grep_live<cr>")
 vim.keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<cr><cmd>UndotreeFocus<cr>")
 
-vim.keymap.set("n", "<leader>k", "<cmd>FloatermNew lazygit<CR>")
+vim.keymap.set("n", "<leader>k", "<cmd>lua Snacks.lazygit()<CR>")
 vim.keymap.set("n", "<leader>x", "<cmd>FloatermKill<CR>")
 
 vim.keymap.set("i", "jj", "<Esc>")
