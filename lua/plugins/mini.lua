@@ -52,6 +52,6 @@ return {
 				goto_right = "<leader>g]",
 			},
 		})
-		require("mini.pick").setup({})("test")
+		require("mini.pick").setup({})
 	end,
 }
