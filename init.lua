@@ -5,7 +5,10 @@ require("config.lazy")
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
+vim.o.winborder = "rounded"
+
 vim.keymap.set("i", "jj", "<Esc>")
+vim.keymap.set("n", "q:", ":", { noremap = true, silent = true })
 
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
