@@ -37,5 +37,5 @@ require("lazy").setup({
 		border = "rounded",
 	},
 	-- automatically check for plugin updates
-	checker = { enabled = true },
+	checker = { enabled = false },
 })
