@@ -50,8 +50,8 @@ vim.keymap.set("n", "<up>", '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 
 -- Center cursor after scrolling with Ctrl-d / Ctrl-u
-vim.keymap.set("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
-vim.keymap.set("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up" })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Half page down" })
 
 -- C-BS for deleting whole word in insert mode
 vim.keymap.set("i", "<C-BS>", "<C-W>", { noremap = true })
