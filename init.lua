@@ -41,7 +41,7 @@ vim.opt.incsearch = true
 vim.cmd.colorscheme("catppuccin-mocha")
 
 -- Scrolloff
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = math.floor(vim.o.lines / 2) - 3
 
 -- Force proper keybindings
 vim.keymap.set("n", "<left>", '<cmd>echo "Use h to move!!"<CR>')
