@@ -30,6 +30,7 @@ return {
 			"lua_ls",
 			"ts_ls",
 			"cssls",
+			"nixd",
 			"rust_analyzer",
 			"emmet_ls",
 		})
