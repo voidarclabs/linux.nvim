@@ -4,14 +4,6 @@ return {
 		"L3MON4D3/LuaSnip",
 	},
 	opts = {
-		providers = {
-			lazydev = {
-				name = "LazyDev",
-				module = "lazydev.integrations.blink",
-				priority = 100,
-			},
-		},
-
 		-- Snippet configuration
 		snippets = {
 			preset = "luasnip", -- Tells blink.cmp to use LuaSnip
@@ -36,12 +28,21 @@ return {
 		},
 		sources = {
 			default = {
+				"lazydev",
 				"lsp", -- (Equivalent to cmp-nvim-lsp)
 				"snippets", -- (Handled by the snippets config, replaces cmp_luasnip source)
 				"buffer", -- (Equivalent to cmp-buffer)
 				"path", -- (Equivalent to cmp-path)
 				-- "cmdline", -- Generally configured separately, but often included by default
 			},
+			providers = {
+          lazydev = {
+            name = "LazyDev",
+            module = "lazydev.integrations.blink",
+            -- make lazydev completions top priority (see `:h blink.cmp`)
+            score_offset = 100,
+          },
+        },
 		},
 	},
 }
