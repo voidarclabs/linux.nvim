@@ -6,6 +6,7 @@ return {
 				lua = { "stylua" },
 				javascript = { "prettier" },
 				python = { "black" },
+				nix = { "nixfmt" },
 			},
 			format_on_save = true,
 		})
