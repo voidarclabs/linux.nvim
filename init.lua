@@ -40,6 +40,9 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
+-- Nowrap
+vim.opt.wrap = false
+
 -- Colorcheme
 vim.cmd.colorscheme("catppuccin-mocha")
 
