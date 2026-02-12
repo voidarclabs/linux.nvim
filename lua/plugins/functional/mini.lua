@@ -22,6 +22,7 @@ return {
 		require("mini.sessions").setup({
 			autosread = true,
 			autowrite = true,
+			file = ".session",
 		})
 		require("mini.notify").setup() -- Better Notifications
 		require("mini.surround").setup() -- Suround selections with characters

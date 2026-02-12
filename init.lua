@@ -59,12 +59,12 @@ vim.keymap.set("n", "<down>", '<cmd>echo "Use j to move!!"<CR>')
 vim.keymap.set("i", "<C-BS>", "<C-W>", { noremap = true })
 
 -- Keybinds for saving and stuff
-vim.keymap.set("n", "<leader>qq", "<cmd>qa!<CR>", { noremap = true })
-vim.keymap.set("n", "<leader>qs", function() -- quit and save session
-	vim.cmd("AutoSession save")
-	vim.cmd("wqa")
-end, { noremap = true })
-vim.keymap.set("n", "<leader>qd", function() -- quit and delete session
-	vim.cmd("AutoSession delete")
-	vim.cmd("wqa")
-end, { noremap = true })
+-- vim.keymap.set("n", "<leader>qq", "<cmd>qa!<CR>", { noremap = true })
+-- vim.keymap.set("n", "<leader>qs", function() -- quit and save session
+-- 	vim.cmd("AutoSession save")
+-- 	vim.cmd("wqa")
+-- end, { noremap = true })
+-- vim.keymap.set("n", "<leader>qd", function() -- quit and delete session
+-- 	vim.cmd("AutoSession delete")
+-- 	vim.cmd("wqa")
+-- end, { noremap = true })

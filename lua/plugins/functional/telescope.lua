@@ -5,7 +5,7 @@ return {
 	config = function()
 		require("telescope").setup({
 			defaults = {
-				file_ignore_patterns = { ".git" },
+				file_ignore_patterns = { ".git", ".node_modules" },
 			},
 			pickers = {
 				find_files = {
@@ -18,6 +18,11 @@ return {
 					theme = "ivy",
 					-- disables netrw and use telescope-file-browser in its place
 					hijack_netrw = true,
+				},
+				["ui-select"] = {
+					require("telescope.themes").get_dropdown({
+						-- even more opts
+					}),
 				},
 			},
 		})
@@ -40,5 +45,6 @@ return {
 		end, { desc = "Telescope buffers" })
 
 		require("telescope").load_extension("file_browser")
+		require("telescope").load_extension("ui-select")
 	end,
 }
